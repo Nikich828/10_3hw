@@ -24,34 +24,33 @@
 
 ### Задание 1
 
-1) Запустите два simple python сервера на своей виртуальной машине на разных портах
-2) Установите и настройте HAProxy, воспользуйтесь материалами к лекции по ссылке
-3) Настройте балансировку Round-robin на 4 уровне.
-4) На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy.
+1) Составьте команду rsync, которая позволяет создавать зеркальную копию домашней директории пользователя в директорию /tmp/backup
+2) Необходимо исключить из синхронизации все директории, начинающиеся с точки (скрытые)
+3) Необходимо сделать так, чтобы rsync подсчитывал хэш-суммы для всех файлов, даже если их время модификации и размер идентичны в источнике и приемнике.
+4) На проверку направить скриншот с командой и результатом ее выполнения
 
 
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/1.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/2.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/3.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/4.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/5.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/6.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/7.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/8.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/9.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/1.jpeg)
+rsync -avh --progress --delete --exclude=".*" --checksum /home/nikitalychagin/ /tmp/backup/
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/2.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/3.jpeg)
+
 
 ### Задание 2
 
 
-1) Запустите три simple python сервера на своей виртуальной машине на разных портах
-2) Настройте балансировку Weighted Round Robin на 7 уровне, чтобы первый сервер имел вес 2, второй - 3, а третий - 4
-3) HAproxy должен балансировать только тот http-трафик, который адресован домену example.local
-4) На проверку направьте конфигурационный файл haproxy, скриншоты, где видно перенаправление запросов на разные серверы при обращении к HAProxy c использованием домена example.local и без него.
+1) Написать скрипт и настроить задачу на регулярное резервное копирование домашней директории пользователя с помощью rsync и cron
+2) Резервная копия должна быть полностью зеркальной
+3) Резервная копия должна создаваться раз в день, в системном логе должна появляться запись об успешном или неуспешном выполнении операции
+4) Резервная копия размещается локально, в директории /tmp/backup
+5) На проверку направить файл crontab и скриншот с результатом работы утилиты.
 
 
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/10.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/11.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/12.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/13.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/14.jpeg)
-![alt text](https://github.com/Nikich828/10_2hw/blob/master/15.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/4.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/5.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/6.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/7.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/8.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/9.jpeg)
+![alt text](https://github.com/Nikich828/10_3hw/blob/master/10.jpeg)
+
